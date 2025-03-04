@@ -1,6 +1,5 @@
 var myGamePiece;
 var myObstacles = [];
-var myScore;
 
 function startGame() {
     myGamePiece = new component(50, 50, "1.svg", 10, 120, "image");
@@ -10,8 +9,8 @@ function startGame() {
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function() {
-        this.canvas.width = 420;
-        this.canvas.height = 270;
+        this.canvas.width = 420;  // عرض کانواس
+        this.canvas.height = 370;  // ارتفاع کانواس
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;

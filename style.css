@@ -1,17 +1,56 @@
+/* تنظیمات بدنه صفحه */
 body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%; /* عرض کامل صفحه */
+    background-color: #f0f0f0; /* رنگ پس زمینه */
+}
+
+/* تنظیمات کانواس (کادر بازی) */
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 canvas {
-    border: 1px solid rgb(232, 232, 232);
     width: 100%;
-    max-width: 400px;
-    height: auto;
-        background-color: #bbd3ff;
+    max-width: 400px; /* حداکثر عرض کانواس */
+    height: 300px; /* ارتفاع کانواس */
+    border: 1px solid rgb(232, 232, 232);
+    background-color: #bbd3ff;
+}
 
+/* تنظیمات دکمه‌ها */
+#buttons {
+    margin-top: 20px;  /* فاصله دکمه‌ها از کانواس */
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+}
+
+/* برای صفحه نمایش موبایل */
+@media (max-width: 600px) {
+    canvas {
+        width: 100%;  /* برای صفحه‌های کوچکتر، عرض کانواس 100% */
+        height: auto;  /* ارتفاع کانواس به طور خودکار تنظیم می‌شود */
+    }
+
+    button {
+        width: 80%;   /* دکمه‌ها عرض بیشتری داشته باشند */
+        font-size: 18px; /* اندازه فونت دکمه‌ها بزرگتر می‌شود */
+    }
 }
